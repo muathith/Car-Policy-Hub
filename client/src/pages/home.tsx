@@ -74,22 +74,6 @@ export default function Home() {
           </p>
         </section>
 
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          {features.map((feature, index) => (
-            <Card 
-              key={index} 
-              className="p-6 text-center hover-elevate transition-all duration-300"
-              data-testid={`card-feature-${index}`}
-            >
-              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <feature.icon className="w-7 h-7 text-primary" />
-              </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">{feature.title}</h3>
-              <p className="text-sm text-muted-foreground">{feature.description}</p>
-            </Card>
-          ))}
-        </section>
-
         <section className="mb-16">
           <h3 className="text-2xl font-bold text-foreground text-center mb-8">
             خدماتنا التأمينية
@@ -120,6 +104,22 @@ export default function Home() {
               </a>
             ))}
           </div>
+        </section>
+
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          {features.map((feature, index) => (
+            <Card 
+              key={index} 
+              className="p-6 text-center hover-elevate transition-all duration-300"
+              data-testid={`card-feature-${index}`}
+            >
+              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <feature.icon className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="text-lg font-semibold text-foreground mb-2">{feature.title}</h3>
+              <p className="text-sm text-muted-foreground">{feature.description}</p>
+            </Card>
+          ))}
         </section>
 
         <section className="bg-card rounded-2xl p-8 md:p-12 border">
