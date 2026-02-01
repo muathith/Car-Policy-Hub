@@ -116,7 +116,7 @@ export default function Home() {
                       data-testid={`img-bio-${link.id}`}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                    <div className="absolute bottom-4 right-4 left-4">
+                    <div className="absolute bottom-4 right-4 left-4 text-center">
                       <h4 className="text-white font-bold text-lg mb-1">
                         {link.title}
                       </h4>
