@@ -108,7 +108,7 @@ export default function Home() {
                 data-testid={`link-bio-${link.id}`}
               >
                 <Card className="overflow-hidden hover-elevate transition-all duration-300 group-hover:scale-[1.02]">
-                  <div className="aspect-video relative overflow-hidden">
+                  <div className="aspect-video 1``relative overflow-hidden">
                     <img
                       src={link.image}
                       alt={link.title}
