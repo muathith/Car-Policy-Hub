@@ -15,8 +15,8 @@ const bioLinks = [
   },
   {
     id: 2,
-    title: "تأمين العائلة والسفر",
-    description: "تأمين شامل يغطي رحلاتك العائلية بأمان تام",
+    title: "       تأمين سيارتك بأفضل الأسعار",
+    description: "تأمين شامل يغطي سيارتك  بأمان تام",
     image: carInsurance2,
     url: "#family",
   },
@@ -30,9 +30,21 @@ const bioLinks = [
 ];
 
 const features = [
-  { icon: Shield, title: "حماية شاملة", description: "تغطية كاملة لجميع أنواع الحوادث" },
-  { icon: Car, title: "سيارة بديلة", description: "سيارة بديلة مجانية أثناء الإصلاح" },
-  { icon: FileCheck, title: "معالجة سريعة", description: "معالجة المطالبات خلال 24 ساعة" },
+  {
+    icon: Shield,
+    title: "حماية شاملة",
+    description: "تغطية كاملة لجميع أنواع الحوادث",
+  },
+  {
+    icon: Car,
+    title: "سيارة بديلة",
+    description: "سيارة بديلة مجانية أثناء الإصلاح",
+  },
+  {
+    icon: FileCheck,
+    title: "معالجة سريعة",
+    description: "معالجة المطالبات خلال 24 ساعة",
+  },
 ];
 
 export default function Home() {
@@ -44,17 +56,25 @@ export default function Home() {
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
               <Shield className="w-6 h-6 text-primary-foreground" />
             </div>
-            <h1 className="text-xl font-bold text-foreground">تأمين السيارات</h1>
+            <h1 className="text-xl font-bold text-foreground">
+              تأمين السيارات
+            </h1>
           </div>
           <nav className="flex items-center gap-4 text-sm">
             <Link href="/privacy" data-testid="link-privacy-header">
-              <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">الخصوصية</span>
+              <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
+                الخصوصية
+              </span>
             </Link>
             <Link href="/security" data-testid="link-security-header">
-              <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">الأمان</span>
+              <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
+                الأمان
+              </span>
             </Link>
             <Link href="/cookies" data-testid="link-cookies-header">
-              <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">الكوكيز</span>
+              <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
+                الكوكيز
+              </span>
             </Link>
           </nav>
         </div>
@@ -70,7 +90,8 @@ export default function Home() {
             تأمين سيارتك بأفضل الأسعار
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            نوفر لك حماية شاملة لسيارتك وعائلتك مع تغطية تأمينية متكاملة تناسب احتياجاتك
+            نوفر لك حماية شاملة لسيارتك وعائلتك مع تغطية تأمينية متكاملة تناسب
+            احتياجاتك
           </p>
         </section>
 
@@ -96,8 +117,15 @@ export default function Home() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                     <div className="absolute bottom-4 right-4 left-4">
-                      <h4 className="text-white font-bold text-lg mb-1">{link.title}</h4>
-                      <p className="text-white/80 text-sm">{link.description}</p>
+                      <h4 className="text-white font-bold text-lg mb-1">
+                        {link.title}
+                      </h4>
+                      <p className="text-white/80 text-sm mb-3">
+                        {link.description}
+                      </p>
+                      <span className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-full text-sm font-bold shadow-lg animate-pulse group-hover:animate-none group-hover:scale-105 transition-transform">
+                        اضغط هنا
+                      </span>
                     </div>
                   </div>
                 </Card>
@@ -108,51 +136,76 @@ export default function Home() {
 
         <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           {features.map((feature, index) => (
-            <Card 
-              key={index} 
+            <Card
+              key={index}
               className="p-6 text-center hover-elevate transition-all duration-300"
               data-testid={`card-feature-${index}`}
             >
               <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <feature.icon className="w-7 h-7 text-primary" />
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">{feature.title}</h3>
-              <p className="text-sm text-muted-foreground">{feature.description}</p>
+              <h3 className="text-lg font-semibold text-foreground mb-2">
+                {feature.title}
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                {feature.description}
+              </p>
             </Card>
           ))}
         </section>
 
         <section className="bg-card rounded-2xl p-8 md:p-12 border">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-foreground mb-3">تواصل معنا</h3>
-            <p className="text-muted-foreground">نحن هنا لمساعدتك في اختيار التأمين المناسب</p>
+            <h3 className="text-2xl font-bold text-foreground mb-3">
+              تواصل معنا
+            </h3>
+            <p className="text-muted-foreground">
+              نحن هنا لمساعدتك في اختيار التأمين المناسب
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="flex items-center gap-4 p-4 rounded-xl bg-background" data-testid="contact-phone">
+            <div
+              className="flex items-center gap-4 p-4 rounded-xl bg-background"
+              data-testid="contact-phone"
+            >
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
                 <Phone className="w-5 h-5 text-primary" />
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">اتصل بنا</p>
-                <p className="font-semibold text-foreground" dir="ltr">+966 XX XXX XXXX</p>
+                <p className="font-semibold text-foreground" dir="ltr">
+                  +966 XX XXX XXXX
+                </p>
               </div>
             </div>
-            <div className="flex items-center gap-4 p-4 rounded-xl bg-background" data-testid="contact-email">
+            <div
+              className="flex items-center gap-4 p-4 rounded-xl bg-background"
+              data-testid="contact-email"
+            >
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
                 <Mail className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <p className="text-sm text-muted-foreground">البريد الإلكتروني</p>
-                <p className="font-semibold text-foreground">info@example.com</p>
+                <p className="text-sm text-muted-foreground">
+                  البريد الإلكتروني
+                </p>
+                <p className="font-semibold text-foreground">
+                  info@example.com
+                </p>
               </div>
             </div>
-            <div className="flex items-center gap-4 p-4 rounded-xl bg-background" data-testid="contact-address">
+            <div
+              className="flex items-center gap-4 p-4 rounded-xl bg-background"
+              data-testid="contact-address"
+            >
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
                 <MapPin className="w-5 h-5 text-primary" />
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">العنوان</p>
-                <p className="font-semibold text-foreground">المملكة العربية السعودية</p>
+                <p className="font-semibold text-foreground">
+                  المملكة العربية السعودية
+                </p>
               </div>
             </div>
           </div>
@@ -166,17 +219,25 @@ export default function Home() {
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                 <Shield className="w-4 h-4 text-primary-foreground" />
               </div>
-              <span className="font-semibold text-foreground">تأمين السيارات</span>
+              <span className="font-semibold text-foreground">
+                تأمين السيارات
+              </span>
             </div>
             <nav className="flex items-center gap-6 text-sm">
               <Link href="/privacy" data-testid="link-privacy-footer">
-                <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">سياسة الخصوصية</span>
+                <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
+                  سياسة الخصوصية
+                </span>
               </Link>
               <Link href="/security" data-testid="link-security-footer">
-                <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">قواعد الأمان</span>
+                <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
+                  قواعد الأمان
+                </span>
               </Link>
               <Link href="/cookies" data-testid="link-cookies-footer">
-                <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">سياسة الكوكيز</span>
+                <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
+                  سياسة الكوكيز
+                </span>
               </Link>
             </nav>
             <p className="text-sm text-muted-foreground">
